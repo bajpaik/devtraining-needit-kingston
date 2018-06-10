@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_transform_script">
+    <sys_transform_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <map display_value="Import Historic NeedIt Data">3d993a16dba21300af70aab35b961922</map>
+        <order>50</order>
+        <script><![CDATA[(function runTransformScript(source, map, log, target /*undefined onStart*/ ) {
+
+	var info = "Starting Import Set Transformation Mapping operation using Data source, " 
++ map.table_source + " and Transform Map " + map.name + " on import set " + import_set.number;
+log.info( info ); 
+
+})(source, map, log, target);]]></script>
+        <sys_class_name>sys_transform_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-06-10 14:11:18</sys_created_on>
+        <sys_id>9d5a8baedbaa1300af70aab35b96195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>onStart</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_transform_script_9d5a8baedbaa1300af70aab35b96195e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-06-10 14:11:18</sys_updated_on>
+        <when>onStart</when>
+    </sys_transform_script>
+</record_update>
