@@ -5,7 +5,7 @@
         <active>true</active>
         <api_name>x_58872_needit.presentNeedItUtils</api_name>
         <client_callable>false</client_callable>
-        <description/>
+        <description>Script include called by  BR  = "NeedIt when needed field date1"/</description>
         <name>presentNeedItUtils</name>
         <script><![CDATA[var presentNeedItUtils = Class.create();
 presentNeedItUtils.prototype = {
@@ -36,13 +36,13 @@ isDateToday: function(strDate){
         <sys_created_by>workhstayh</sys_created_by>
         <sys_created_on>2018-07-05 22:48:30</sys_created_on>
         <sys_id>0140713edbcb5300329ffe1ebf961990</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>presentNeedItUtils</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_include_0140713edbcb5300329ffe1ebf961990</sys_update_name>
         <sys_updated_by>workhstayh</sys_updated_by>
-        <sys_updated_on>2018-07-06 18:35:40</sys_updated_on>
+        <sys_updated_on>2018-07-09 00:49:24</sys_updated_on>
     </sys_script_include>
 </record_update>
