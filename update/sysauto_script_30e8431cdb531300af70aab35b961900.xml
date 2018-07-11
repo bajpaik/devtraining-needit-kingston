@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Find NeedIt Overdue Tasks</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-07-10 20:51:10</run_start>
+        <run_time>1970-01-01 16:00:00</run_time>
+        <run_type>daily</run_type>
+        <script><![CDATA[//get today's time and date
+var n = new GlideDateTime();
+
+var quer = new GlideRecord('x_58872_needit_needit');
+quer.addQuery('u_when_needed','<=',n);
+quer.addQuery('state','!=',3); // a State field value of Closed Complete.
+quer.query();
+
+
+while(quer.next()){
+	gs.eventQueue('x_58872_needit.overdueNeedItTask', quer ,quer.number,gs.getUserName(),'needit_queue' ); //Use the fifth parameter in gs.eventQueue() to send the event to a custom queue 'needit_queue' that was made from copying "text index event process" schedule job. Enclose the queue name in either single or double quote marks
+	gs.info('OverDue tasks records are '+ quer.number);
+	
+}]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-10 21:05:14</sys_created_on>
+        <sys_id>30e8431cdb531300af70aab35b961900</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Find NeedIt Overdue Tasks</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sysauto_script_30e8431cdb531300af70aab35b961900</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-11 01:14:04</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
